@@ -77,28 +77,28 @@
     <span class="w-40 h-1 bg-cBase block mx-auto mb-8"></span>
     <dl data-accordion="accordion" data-anima="show-up" class="mt-16">
       <div id="accordion" class="p-5 rounded-lg cursor-pointer bg-gray-100">
-        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="inline-block w-4 h-2 bg-cBase3"></span>Para quem é direcionada a plataforma?</dt>
-        <dd class="font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose">
+        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-4 h-2 bg-cBase3"></span>Para quem é direcionada a plataforma?</dt>
+        <dd class="animate-accordion font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose">
           O sistema da Umbrella é direcionado para clínicas, médicos e pacientes que querem facilidade no agendamento e no acompanhamento de consultas.
         </dd>
       </div>
       <div id="accordion" class="p-5 rounded-lg cursor-pointer">
-        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="inline-block w-2 h-4 bg-cBase3"></span>Como posso entrar em contato?</dt>
-        <dd class="font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">
+        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-2 h-4 bg-cBase3"></span>Como posso entrar em contato?</dt>
+        <dd class="animate-accordion font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">
           Você poed entrar em contato pelo email ou pelo telefone: <br>
           Email: umbrella@umbrela.com <br>
           Telefone: (99) 9999-9999
         </dd>
       </div>
       <div id="accordion" class="p-5 rounded-lg cursor-pointer bg-gray-100">
-        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="inline-block w-2 h-4 bg-cBase3"></span>É seguro?</dt>
-        <dd class="font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">
+        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-2 h-4 bg-cBase3"></span>É seguro?</dt>
+        <dd class="animate-accordion font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">
           Sim, os dados são armazenados de forma segura no sistema, seguindo todas as diretrizes de privacidade e segurança de dados.
         </dd>
       </div>
       <div id="accordion" class="p-5 rounded-lg cursor-pointer">
-        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="inline-block w-2 h-4 bg-cBase3"></span>Posso acessar os prontuários de qualquer lugar?</dt>
-        <dd class="font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">Sim, você pode acessar os prontuários de qualquer lugar, desde que tenha uma conexão à internet e acesso ao sistema.</dd>
+        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-2 h-4 bg-cBase3"></span>Posso acessar os prontuários de qualquer lugar?</dt>
+        <dd class="animate-accordion font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">Sim, você pode acessar os prontuários de qualquer lugar, desde que tenha uma conexão à internet e acesso ao sistema.</dd>
       </div>
     </dl>
   </section>
@@ -127,47 +127,7 @@
     </div>
   </footer>
 
-
-
-  <script>
-  class SmoothScroll {
-    constructor(links, options) {
-      this.links = document.querySelectorAll(links);
-      if (options === undefined) {
-        this.options = {
-          behavior: "smooth",
-          block: "start"
-        };
-      } else {
-        this.options = options;
-      }
-      this.scrollToSection = this.scrollToSection.bind(this);
-    }
-
-    scrollToSection(event) {
-      event.preventDefault();
-      const href = event.currentTarget.getAttribute("href");
-      const section = document.querySelector(href);
-      section.scrollIntoView(this.options);
-    }
-
-    addLinkEvent() {
-      this.links.forEach((link) => {
-        link.addEventListener("click", this.scrollToSection);
-      })
-    }
-
-    init() {
-      if (this.links.length) {
-        this.addLinkEvent();
-        return this;
-      }
-    }
-  }
-
-  const smoothScroll = new SmoothScroll("[data-scroll='smooth'] a[href^='#']");
-  smoothScroll.init();
-  </script>
+  <script src="/scripts/lp.js"></script>
 </body>
 
 </html>
