@@ -13,26 +13,33 @@
 </head>
 
 <body class="box-border">
-  <header id="home" class="max-w-screen-xl m-auto p-5 flex items-center justify-between text-cBlack">
-    <img src="img/umbrella-logo.svg">
-    <nav class="flex items-center gap-12">
-      <ul data-scroll="smooth" class="flex gap-12">
-        <li><a href="#about" class="py-4 font-poppins font-medium">Sobre Nós</a></li>
-        <li><a href="#benefits" class="py-4 font-poppins font-medium">Vantagens</a></li>
-        <li><a href="#faq" class="py-4 font-poppins font-medium">FAQ</a></li>
-      </ul>
-      <a href="./html/login.html" class="py-2 px-12 bg-cBase text-gray-50 rounded-lg font-poppins font-semibold text-sm">ENTRAR</a>
-    </nav>
+  <header id="home" class="text-black md:fixed md:w-full md:top-0 md:right-0 md:left-0">
+    <div class="mx-auto container p-5 mt-4 md:flex items-center justify-between hidden bg-white/60 backdrop-blur-md shadow-lg rounded-lg">
+      <img src="img/umbrella-logo.svg">
+      <nav class="flex items-center gap-12">
+        <ul data-scroll="smooth" class="flex gap-12">
+          <li><a href="#about" class="py-4 font-poppins font-medium after:block after:w-0 after:bg-cBase after:transition-all after:content-[''] hover:after:w-full after:h-[3px]">Sobre Nós</a></li>
+          <li><a href="#benefits" class="py-4 font-poppins font-medium after:block after:w-0 after:bg-cBase after:transition-all after:content-[''] hover:after:w-full after:h-[3px]">Vantagens</a></li>
+          <li><a href="#faq" class="py-4 font-poppins font-medium after:block after:w-0 after:bg-cBase after:transition-all after:content-[''] hover:after:w-full after:h-[3px]">FAQ</a></li>
+        </ul>
+        <a href="./html/login.html" class="py-2 px-12 bg-cBase text-gray-50 rounded-lg font-poppins font-semibold text-sm">ENTRAR</a>
+      </nav>
+    </div>
+    <div class="mx-auto container px-5 mt-4">
+      <a href="./html/login.html" class="py-2 px-12 bg-cBase text-gray-50 rounded-lg font-poppins font-semibold text-sm md:hidden flex w-20 justify-center items-center">ENTRAR</a>
+    </div>
+    
   </header>
 
 
-  <main data-anima="show-up" class="max-w-screen-xl m-auto p-5 grid grid-cols-2 gap-10 mt-16">
+  <main data-anima="show-up" class="max-w-screen-xl m-auto p-5 grid md:grid-cols-2 grid-cols-1 gap-10 mt-16 md:text-start">
     <div class="self-center">
-      <h1 class="font-poppins text-6xl font-semibold leading-tight mb-8">Inove na Gestão<br>da sua Clínica<span class="text-cBase">.</span></h1>
+      <h1 class="font-poppins md:text-6xl text-5xl font-semibold leading-tight mb-8">Inove na Gestão<br>da sua Clínica<span class="text-cBase">.</span></h1>
       <p class="font-roboto text-2xl mb-5 text-gray-700">Agende consultas, gerencie pacientes, acompanhe registros médicos e controle finanças de forma integrada e segura.</p>
       <a class="px-6 py-4 bg-cBase text-gray-50 font-bold rounded-lg shadow-md inline-block cursor-pointer">COMEÇAR AGORA</a>
     </div>
-    <img src="img/home-img.png">
+    <img src="img/home-img.png" class="hidden md:flex">
+    <img src="img/home-img-mobile.svg" class="md:hidden flex">
     <!-- <img src="img/home-img-mobile.svg"> -->
   </main>
 
@@ -42,16 +49,16 @@
       <h1 class="text-6xl font-semibold font-poppins leading-tight mb-8">Sobre Nós<span class="text-cBase">.</span></h1>
       <span class="w-40 h-1 bg-cBase block mx-auto mb-8"></span>
       <p class="text-xl leading-relaxed font-roboto text-gray-700 flex flex-col items-center gap-8">Nosso objetivo é oferecer uma solução abrangente que permita aos médicos e administradores focarem no que realmente importa: o cuidado com os pacientes. Desde o agendamento de consultas até o acompanhamento do histórico médico, o Umbrella oferece ferramentas flexíveis e eficientes para otimizar todos os aspectos da operação clínica.</p>
-      <img src="img/about-img.svg" width="500" class="mx-auto mt-12">
+      <img src="img/about-img.svg" width="500" class="mx-auto mt-12 hidden md:flex">
     </div>
   </section>
 
 
   <section id="benefits" class="bg-cBase2 mt-16 p-10">
     <div class="max-w-screen-xl m-auto p-5">
-      <h1 data-anima="show-left" class="text-6xl font-semibold font-poppins text-center leading-tight mb-8 text-4xl text-gray-50">Vantagens<span class="text-cBase3">.</span></h1>
+      <h1 data-anima="show-left" class="font-semibold font-poppins text-center leading-tight mb-8 text-4xl text-gray-50">Vantagens<span class="text-cBase3">.</span></h1>
       <span class="w-40 h-1 bg-cBase3 block mx-auto mb-8"></span>
-      <div class="mt-28 grid grid-cols-3 justify-between items-baseline gap-10">
+      <div class="mt-28 grid grid-cols-1 md:grid-cols-3 justify-between items-baseline gap-10">
         <div data-anima="show-up" class="flex flex-col items-center text-center mb-10">
           <img src="img/schedule.svg">
           <h3 class="mt-6 text-3xl font-poppins font-medium leading-relaxed text-cBase3">Gestão de Agenda</h3>
@@ -83,7 +90,7 @@
         </dd>
       </div>
       <div id="accordion" class="p-5 rounded-lg cursor-pointer">
-        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-2 h-4 bg-cBase3"></span>Como posso entrar em contato?</dt>
+        <dt class="font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-2 h-4 bg-cBase3"></span>Como posso entrar em contato?</dt>
         <dd class="animate-accordion font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">
           Você poed entrar em contato pelo email ou pelo telefone: <br>
           Email: umbrella@umbrela.com <br>
@@ -91,7 +98,7 @@
         </dd>
       </div>
       <div id="accordion" class="p-5 rounded-lg cursor-pointer bg-gray-100">
-        <dt class="text-lg font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-2 h-4 bg-cBase3"></span>É seguro?</dt>
+        <dt class="font-poppins font-semibold flex items-center gap-2 text-base leading-5 text-cBlack"><span class="duration-75 inline-block w-2 h-4 bg-cBase3"></span>É seguro?</dt>
         <dd class="animate-accordion font-roboto ml-4 mt-4 max-w-screen-ch text-base leading-relaxed max-w-prose hidden">
           Sim, os dados são armazenados de forma segura no sistema, seguindo todas as diretrizes de privacidade e segurança de dados.
         </dd>
@@ -105,7 +112,7 @@
 
 
   <footer class="bg-cBase2 mt-16 p-10">
-    <div class="max-w-screen-xl m-auto py-15 px-5 grid grid-cols-3 gap-10">
+    <div class="max-w-screen-xl m-auto py-15 px-5 grid md:grid-cols-3 grid-cols-1 gap-10">
       <img src="img/umbrella-logo-footer.svg">
       <div>
         <h3 class="text-xl font-poppins text-gray-50 mb-8 text-lg leading-relaxed">Contato</h3>

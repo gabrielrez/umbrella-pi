@@ -45,6 +45,8 @@ class Accordion{
       item.querySelector("dt span").classList.toggle("h-4");
       item.querySelector("dt span").classList.toggle("w-4");
       item.querySelector("dt span").classList.toggle("h-2");
+
+      console.log('cscsccsc');
   }
 
   addAccordionEvent(){
