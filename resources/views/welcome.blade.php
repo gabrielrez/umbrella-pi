@@ -1,18 +1,7 @@
-<!doctype html>
-<html>
+@extends('config')
+@section('content')
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/umbrella.svg">
-  <title>Umbrella - Landing Page</title>
-  @vite('resources/css/app.css')
-</head>
 
-<body class="box-border">
   <header id="home" class="text-black md:fixed md:w-full md:top-0 md:right-0 md:left-0">
     <div class="mx-auto container p-5 mt-4 md:flex items-center justify-between hidden bg-white/60 backdrop-blur-md shadow-lg rounded-lg">
       <img src="img/umbrella-logo.svg">
@@ -135,6 +124,4 @@
   </footer>
 
   <script src="/scripts/lp.js"></script>
-</body>
-
-</html>
+@endsection
