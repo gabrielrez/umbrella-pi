@@ -9,6 +9,7 @@ export default {
     extend: {
       colors:{
         cBase: '#7712A1',
+        cBase1: '#7712A1',
         cBase2: '#330047',
         cBase3: '#B6ED1F',
         cBlack: '#111111',
